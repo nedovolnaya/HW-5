@@ -48,7 +48,7 @@ public class Main {
         int birthPerYear = 17;
         int deathPerYear = 8;
         for (int i = 1; i <= 10; i++) {
-            population = population + population / 1000 * 17 - population / 1000 * 8;
+            population = population + population / 1000 * birthPerYear - population / 1000 * deathPerYear;
             System.out.println("Год " + i + " ,численность населения составляет " + population);
         }
         System.out.println();
@@ -58,24 +58,25 @@ public class Main {
     public static void task4() {
         System.out.println("Задача 4");
         double amount = 15000;
-        int i = 1;
+        int i = 0;
         while (amount < 12_000_000) {
             amount = amount + amount * 0.07;
             i++;
             System.out.println("Месяц " + i + " сумма накоплений равна " + amount);
-            System.out.println();
         }
+        System.out.println();
     }
 
     public static void task5() {
         System.out.println("Задача 5");
         double amount = 15000;
-        int i = 1;
+        int i = 0;
         while (amount < 12_000_000) {
             amount = amount + amount * 0.07;
             i++;
-            if (i % 6 == 0)
+            if (i % 6 == 0) {
                 System.out.println("Месяц " + i + " сумма накоплений равна " + amount);
+            }
         }
         System.out.println();
 
@@ -87,9 +88,8 @@ public class Main {
         for (int i = 6; i <= 9 * 12; i = i + 6) {
             amount += amount * 0.07 * 6;
             System.out.println("Период " + i + " месяцев, сумма накоплений равна " + amount);
-            System.out.println();
-
         }
+        System.out.println();
     }
 
     public static void task7() {
@@ -105,8 +105,9 @@ public class Main {
         int last200Year = 2023 - 200;
         int future100Year = 2023 + 100;
         for (int cometYear = 0; cometYear <= future100Year; cometYear = cometYear + 79) {
-            if (cometYear >= last200Year && cometYear <= future100Year)
+            if (cometYear >= last200Year) {
                 System.out.println(cometYear);
+            }
         }
 
     }
