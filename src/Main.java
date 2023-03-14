@@ -85,7 +85,7 @@ public class Main {
     public static void task6() {
         System.out.println("Задача 6");
         double amount = 15000;
-        for (int i = 1; i <= 9 * 12; i = i + 6) {
+        for (int i = 1; i <= 9 * 12; i = i + 1) {
             amount = amount + amount * 0.07;
             if (i % 6 == 0) {
                 System.out.println("Период " + i + " месяцев, сумма накоплений равна " + amount);
